@@ -1,18 +1,17 @@
-
 package com.company.main;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import com.company.dao.inter.CountryDaoInter;
+import com.company.dao.inter.EmploymentHistoryDaoInter;
+import com.company.dao.inter.UserDaoInter;
+import com.company.entity.User;
 
 public class Main {
-    public static void foo() throws Exception {
+    
+    public static void main(String[] args) throws Exception {
 
-        Class.forName("com.mysql.jdbc.Driver");
-        com.mysql.jdbc.Driver
-        String url = "jdbc:mysql://localhost:3306";
-        String username = "root";
-        String password = "";
-        Connection c = DriverManager.getConnection(url, username, password);
-
+        CountryDaoInter dao=Context.instanceCountryDao();
+        dao.getAll();
+        
+        
     }
 }
